@@ -1,1 +1,14 @@
-4 pillars of OOP
+4 pillars
+
+Encapsulation : Containing information inside object, exposing certain info
+    Avoid data curruption, using private public access
+Abstraction : create a abstraction layer hiding details of class . Simple interface to interact with object
+Inheritance : reuse the functionaly from others. 
+Polymophism : Multiple forms can be given a method. e.g. Method overriding . 
+              Virtual method of base class can be overriden in chid class
+
+Property to access object data
+Composition : a class contained with another class
+
+Interface : A contract. Class with only signatures. Implemented by class
+
