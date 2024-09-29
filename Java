@@ -1,0 +1,37 @@
+Java SDK : Java programming language, Java Runtime, Java Library 
+Java complier : code to byte code (.net IL)
+Java VM : Byte code to machine language .net CLR
+.java file
+
+C#.net & Java are both compiled , while Python is interpreted
+Backward compatibility                  Python 2 does not run on Python 3 
+Performance                             Good for small applications 
+
+AWT : for desktop app. Abstract Windowing Toolkit
+Swing : Pure Java GUI
+Java FX : Uses FXML , advanced component, CSS, 3D graphics
+
+Java beans : libary
+Java EE . Enterprise apps. Java EE aplication servers like WebShpere (IBM) , WebLogic (Oracle) , Tomcat (Apache) , Wildfly (Red Hat)
+moved to Jakaarta.ee
+
+Java in Cloud. Microservices for elasticity. Spring Boot : Micro framework 
+
+IDE : Code Inteliisense , Inline documentaion, Debug 
+Eclipse & IntelliJ (by Jetbrains)
+
+Java Libraries : 
+Spring Framework . Dependency Injection . Inversion of control . You don't call me , i will call you. by Decoupling classes . 
+Dependecy Injection Container : You declare components & Dependency and Spring framework will invoke in runtime in teh container
+eg Application class => Helper , Utility class
+Improved testing
+
+Open source Libraries : Google Guava, Apache Commons, Apache Log4J, Netty, Akka, RxJava, Apache Camel
+Data access Libraries : JDBC Java Database Libraries. 
+ORMs (Object Relational mappers) maps Java objects to Db tables. No SQL queries  - Hibernate , EclipseLink. 
+SQL DSL (Domain Specific Languages) : Uses sql queries . JOOQ, QueryDSL
+
+Big Data : Apache Hadoop library for processing Bigdata . Apache Spark
+Cassandra : No sql data wrriten in Java. Noe4J, Elasticsearch , Hadoop distributed File system
+
+Alternate languages that compile t Java bytecode : Groovy, Scala, Kotlin, JPython
