@@ -1,0 +1,21 @@
+Context , Recurring Problem, Resuable Solution
+A proven resuable and named solution for a recurring problem in a context
+
+Abstraction : Using Interfaces & Abstract class
+
+Single responsibility : Single reason for a class to change
+Open close principle
+Dependency Injection principle : High level modules should not depend on low level modules
+
+Purpose 
+Creational pattern
+ Singleton: Class has only one instance with a global point of access. Make the constructor private , a static variable to hold the class instance.
+Behavioural pattern
+ Observer : defines a one-to-many dependency between objects,   allowing one object (the subject) to notify multiple observers of state changes. 
+ This pattern is useful for implementing event handling systems.Observers can be added or removed at runtime, providing dynamic relationships between objects.
+Structural pattern
+
+Inheritance : Clear hierarchies , implement polymorphism , tight coupling of parent and child classes
+Composition : no clear hierarchies, loose coupling , greater flexibility
+Composition is a design principle where a class is composed of one or more objects from other classes, allowing for more flexible relationships.
+DI is primarily about managing dependencies, whereas Composition is about building complex objects from simpler ones
