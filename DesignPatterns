@@ -10,12 +10,21 @@ Dependency Injection principle : High level modules should not depend on low lev
 Purpose 
 Creational pattern
  Singleton: Class has only one instance with a global point of access. Make the constructor private , a static variable to hold the class instance.
+
 Behavioural pattern
  Observer : defines a one-to-many dependency between objects,   allowing one object (the subject) to notify multiple observers of state changes. 
  This pattern is useful for implementing event handling systems.Observers can be added or removed at runtime, providing dynamic relationships between objects.
+Example Order class => Send client email, make Invoice entry
+2 corresponding methods in Order class. New method will be needed for any additional notification
+
+Solution: 
+Order class => Observer Interface . All observers implement this interface
+Order class will have method to register observers. 
+New observers can be added at run time without the need of chaging the Order class 
 Structural pattern
 
 Inheritance : Clear hierarchies , implement polymorphism , tight coupling of parent and child classes
 Composition : no clear hierarchies, loose coupling , greater flexibility
 Composition is a design principle where a class is composed of one or more objects from other classes, allowing for more flexible relationships.
 DI is primarily about managing dependencies, whereas Composition is about building complex objects from simpler ones
+
