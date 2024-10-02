@@ -7,9 +7,41 @@ Single responsibility : Single reason for a class to change
 Open close principle
 Dependency Injection principle : High level modules should not depend on low level modules
 
-Purpose 
 Creational pattern
- Singleton: Class has only one instance with a global point of access. Make the constructor private , a static variable to hold the class instance.
+Singleton:
+Class has only one instance with a global point of access. Make the constructor private , a static variable to hold the class instance.
+Factory :
+Provides a simple way to create objects where factory manages creating objects while client just passes the class identifier to a factory. 
+Factory class takes care of creating the concreate class reducing the dependency of client code on concreate class. 
+result is loose decoupling. 
+Public Interface iProduct {}
+Public class ProductA : iProduct
+Public class ProductB : iProduct
+//Factory class
+Public class SimpleFactory
+{
+ // Method to create product based on identifier
+  Public iProduct CreateProduct(string productType)
+  {
+   if(productType == "A")
+    return new ProductA();
+   elseif (productType = "B")
+    return new ProductB;
+  }
+}
+//Client class
+ SimpleFactory factory = new SimpleFactory();
+ iProduct productA = factory.CreateProduct("A");
+ iProduct productB = factory.CreateProduct("B");
+
+Factory Method : 
+Hierarchy of factories, where the base factory being abstract, which creates object from Hierarcy of concreate classes.
+Subclasses of factory creates concreate class. Object creation is deligated to factory subclass.
+Abstract Factory :
+More complex than factory method. 
+Multiple factory and multiple products. Factory is abstract and can create multiple products. 
+
+Builder Design Pattern is a creational design pattern that is used to construct complex objects step by step. Unlike other creational patterns that return the product in a single step, the builder pattern allows you to construct a product by calling multiple methods in a specific order, without directly calling the product's constructor.
 
 Behavioural pattern
  Observer : defines a one-to-many dependency between objects,   allowing one object (the subject) to notify multiple observers of state changes. 
@@ -23,8 +55,13 @@ Order class will have method to register observers.
 New observers can be added at run time without the need of chaging the Order class 
 Structural pattern
 
+Facade Design Pattern is a structural pattern that provides a simplified interface to a complex system of classes, libraries, or frameworks. The purpose of the facade pattern is to hide the complexity of the system and make it easier for clients to interact with it by providing a higher-level, simpler interface.
+
 Inheritance : Clear hierarchies , implement polymorphism , tight coupling of parent and child classes
 Composition : no clear hierarchies, loose coupling , greater flexibility
 Composition is a design principle where a class is composed of one or more objects from other classes, allowing for more flexible relationships.
 DI is primarily about managing dependencies, whereas Composition is about building complex objects from simpler ones
+
+Virtual Method : A method in a base class with a default implementation that can be optionally overridden in derived classes.
+Abstract Method : A method that has no implementation in the base class and must be overridden in derived classes.
 
