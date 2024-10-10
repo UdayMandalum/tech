@@ -1,8 +1,12 @@
 git commit -m "comments"
 git checkout -b branchname // Create branch and switch
-git add
+git checkout main/branchname
+git add * // Stage the commit
 git switch
 git delete
 git status
-git branch
-git branch branchname
+git branch // list of all branches
+git branch -m currentbranch newbranchname // Rename a branch
+git branch -d branchname // delete . error for uncommited file
+get branch -D branchname // delete forcefully 
+
