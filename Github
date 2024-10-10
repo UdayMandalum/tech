@@ -1,0 +1,8 @@
+git commit -m "comments"
+git checkout -b branchname // Create branch and switch
+git add
+git switch
+git delete
+git status
+git branch
+git branch branchname
