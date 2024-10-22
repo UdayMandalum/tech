@@ -10,3 +10,9 @@ git branch -m currentbranch newbranchname // Rename a branch
 git branch -d branchname // delete . error for uncommited file
 get branch -D branchname // delete forcefully 
 
+Fast forward merge : no additional changes has happened on main 
+git checkout targetbranch // switch to target
+git merge sourcebranch // merge source to target
+
+git diff branch1 branch2
+git show <hash>
