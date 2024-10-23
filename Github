@@ -17,6 +17,22 @@ git merge sourcebranch // merge source to target
 git diff branch1 branch2
 git show <hash>
 
+git fetch // 
+git pull // fetch & merge
+got push 
+
+
+Squase multiple commits
 git log -- oneline // See branch history
 git merge-base branch main
 git rebase -i commit-hash
+
+Rebase from Main : Branch get the commits from main , before the branch commits
+git rebase main
+git pull rebase // commit in sequence history
+
+git cherry picking : Selective commits copied to other brain/ main. Creates duplicate commit
+used to apply bug fix on all branches 
+git cherry-pick commit-hash
+
+
