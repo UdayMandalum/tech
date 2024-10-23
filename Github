@@ -16,3 +16,7 @@ git merge sourcebranch // merge source to target
 
 git diff branch1 branch2
 git show <hash>
+
+git log -- oneline // See branch history
+git merge-base branch main
+git rebase -i commit-hash
