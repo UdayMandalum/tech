@@ -1,0 +1,10 @@
+Multidimensional Cube is not supported in Azure Analysis Service, only supports tabular models
+
+Multidimensional : Measures, Dimension, cube . MDX 
+Tabular 	 : Column, Table , model . DAX
+
+Measure hold column with numerical value
+Dimensions are derived from tables consisting at least one column
+
+MOLAP : Data is stored in cube. Fast response, but more processing time.
+ROLAP : Data stored in underlining databases. Slower response
