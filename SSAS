@@ -5,6 +5,7 @@ Tabular 	 : Column, Table , model . DAX
 
 Measure : Numerical data to be analyzed e.g. counts, sums, averages .. 
 Dimensions : Provides context to numerical values like people, things, places
+look for word "by" . e.g. qnty sold by date, customer, color 
 
 MOLAP : Data is stored in cube. Fast response, but more processing time.
 ROLAP : Data stored in underlining databases. Slower response
