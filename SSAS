@@ -11,7 +11,7 @@ MOLAP : Data is stored in cube. Fast response, but more processing time.
 ROLAP : Data stored in underlining databases. Slower response
 
 Dimentional Modeling : 
-Fact Table 
-Dimention Table
+Fact Table : Many columns of numeric data. 
+Dimention Table : will have a forign key in Fact table
 
 Modelling Approach : OLTP (Transactional, 3rd normalized level, fater writes) & OLAP (Analytical, Denormalized , faster read)
