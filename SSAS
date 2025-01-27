@@ -15,3 +15,5 @@ Fact Table : Many columns of numeric data.
 Dimention Table : will have a forign key in Fact table
 
 Modelling Approach : OLTP (Transactional, 3rd normalized level, fater writes) & OLAP (Analytical, Denormalized , faster read)
+
+SSDT : SQL Server Data Tools. extension of Visual studio
