@@ -4,4 +4,96 @@ benefit is fast UI and better user experiance
 
 Component : javascript function that returns JSX , looks like HTML, alternative way to write js
 JSX : has hirarcy of components
-Babel tool coverts the JSX to JS
+Babel & SWC (Transpiler) tool coverts the JSX to JS
+React DOM renders to html 
+
+Tools : Vite , Next.js
+
+
+🧱 Prerequisites
+Before you start, make sure you have the following installed:
+
+Node.js & npm
+
+Install from https://nodejs.org
+
+Verify installation:
+
+bash
+Copy
+Edit
+node -v
+npm -v
+Visual Studio Code
+
+Download from https://code.visualstudio.com
+
+⚙️ Step-by-Step: Create and Set Up React Project
+🔹 Step 1: Open VS Code Terminal
+Open VS Code
+
+Go to Terminal > New Terminal (or use shortcut Ctrl + `)
+
+🔹 Step 2: Create a New React App
+Use Vite (modern, fast) or Create React App (older, more bloated). Here's both:
+
+👉 Option 1: Using Vite (Recommended)
+bash
+Copy
+Edit
+npm create vite@latest my-react-app -- --template react
+Replace my-react-app with your project name.
+
+Then:
+
+bash
+Copy
+Edit
+cd my-react-app
+npm install
+👉 Option 2: Using Create React App (CRA)
+bash
+Copy
+Edit
+npx create-react-app my-react-app
+cd my-react-app
+🔹 Step 3: Open Project in VS Code
+bash
+Copy
+Edit
+code .
+This opens the current folder (your React project) in VS Code.
+
+🔹 Step 4: Install VS Code Extensions
+Install these from the Extensions sidebar (or use the Extensions Marketplace):
+
+🔹 ESLint – for linting JavaScript
+
+🔹 Prettier - Code formatter – for consistent formatting
+
+🔹 React Developer Tools – helps with JSX and React syntax
+
+🔹 Simple React Snippets – handy code snippets for React
+
+🔹 Step 5: Run the React Development Server
+For Vite:
+bash
+Copy
+Edit
+npm run dev
+For CRA:
+bash
+Copy
+Edit
+npm start
+Open browser at http://localhost:5173 (Vite) or http://localhost:3000 (CRA)
+
+You should see the React welcome page!
+
+🔹 Step 6: Start Coding
+Open src/App.jsx (Vite) or src/App.js (CRA)
+
+Modify JSX code — e.g., change <h1>Hello React!</h1>
+
+Save the file and see live reload in browser
+
