@@ -1,8 +1,29 @@
-IT team to build and maintain applications for Indices business which builds indexes across asset classes like fixed income bonds and leverage loans, 
-QIS indices like equity, commodities, fx
+Our IT team is responsible for building and maintaining applications that support the Indices business,
+which creates and manages a wide range of indices across various asset classes — including fixed income (bonds, leveraged loans), as well as quantitative investment strategy (QIS) indices spanning equities, commodities, and foreign exchange (FX).
 
-We have feeds that extracts data like prices, static instrument strucures from various external and internal sources. 
-The extracted data is transformed and loaded to database. 
-Index calculation engine uses the data to calculate analytics. The analytics are aggregated at index level using SQL analitical services. 
-The data is then made available to clients via feeds and external facing web portal. 
+We support the entire data lifecycle and index production pipeline, which includes:
 
+1. Data Ingestion:
+We integrate with multiple internal and external data providers to extract critical datasets such as:
+
+Market prices
+
+Static instrument details (structures, identifiers, classifications)
+
+Corporate actions and reference data
+
+2. Data Processing & Storage:
+Extracted data undergoes validation and transformation before being loaded into our internal databases. This ensures consistency and readiness for index computation.
+
+3. Index Calculation Engine:
+The processed data feeds into our index calculation engine, which computes complex index-level analytics, including performance, returns, risk metrics, and weights.
+
+4. Analytics Aggregation:
+We use SQL Server Analysis Services (SSAS) to aggregate and structure the analytics at the index and constituent level, enabling efficient querying and reporting.
+
+5. Distribution:
+The finalized index data and analytics are delivered to clients via:
+
+Automated outbound feeds
+
+An external-facing web portal, which provides interactive access to index constituents, historical data, and analytics
