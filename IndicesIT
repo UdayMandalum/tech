@@ -1,5 +1,8 @@
 IT team to build and maintain applications for Indices business which builds indexes across asset classes like fixed income bonds and leverage loans, 
 QIS indices like equity, commodities, fx
 
-We have feeds that extracts data like prices, static strucures from various external and internal sources. 
-The extracted data is transformed 
+We have feeds that extracts data like prices, static instrument strucures from various external and internal sources. 
+The extracted data is transformed and loaded to database. 
+Index calculation engine uses the data to calculate analytics. The analytics are aggregated at index level using SQL analitical services. 
+The data is then made available to clients via feeds and external facing web portal. 
+
