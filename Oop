@@ -1,14 +1,42 @@
 4 pillars
 
 Encapsulation : Containing information inside object, exposing certain info
-    Avoid data curruption, using private public access
-Abstraction : create a abstraction layer hiding details of class . Simple interface to interact with object
+    Avoid data curruption from unintended changes, using private public access
+Abstraction : create a abstraction layer hiding details of class . Simple interface to interact with object.
+    Expose only essential features and hide complexity from user
+                Encapsulation        	                            Abstraction
+Purpose:        Protect data by hiding implementation	    Hide complexity by showing only essentials
+How it's done:	Access modifiers (private, public)	        Abstract classes, interfaces
+Focus:        	Data protection	                            Behavior simplification
+Example:    	Private fields with getters/setters	        Abstract methods, interfaces
+Real-world analogy	Medicine bottle with a sealed cap	Car pedal (you press, not knowing how it works)
+
 Inheritance : reuse the functionaly from others. 
 Polymophism : Multiple forms can be given a method. e.g. Method overriding . 
-              Virtual method of base class can be overriden in chid class
+              Virtual method of base class can be overriden in child class
 
 Property to access object data
 Composition : a class contained with another class
 
 Interface : A contract. Class with only signatures. Implemented by class
 
+Interview Questions
+What are the four pillars of OOP? Explain each with examples.
+
+What is the difference between abstraction and encapsulation?
+
+How does inheritance work in C#? Can a class inherit from multiple classes?
+
+What is polymorphism? Explain compile-time vs runtime polymorphism.
+
+What is method overloading vs method overriding?
+
+What is the difference between an interface and an abstract class? When would you use each?
+
+Can a method be virtual and abstract at the same time?
+
+What is a sealed class? Why and when would you use it?
+
+What is the difference between new and override keywords in method hiding?
+
+Can you explain how constructors work in inheritance?
