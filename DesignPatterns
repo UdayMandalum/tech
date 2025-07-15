@@ -65,3 +65,23 @@ DI is primarily about managing dependencies, whereas Composition is about buildi
 Virtual Method : A method in a base class with a default implementation that can be optionally overridden in derived classes.
 Abstract Method : A method that has no implementation in the base class and must be overridden in derived classes.
 
+Questions 
+How would you implement loose coupling in your application using OOP?
+
+What is SOLID? Explain each principle with real-world examples.
+
+How would you design a plug-in system using interfaces or abstract classes?
+
+What is the Liskov Substitution Principle and how do you ensure it?
+
+Can you explain the difference between IS-A and HAS-A relationships?
+
+How do design patterns (like Factory, Strategy, or Observer) relate to OOP?
+
+When should you favor composition over inheritance? Give an example.
+
+What are some pitfalls of deep inheritance hierarchies?
+
+Can you explain covariance and contravariance in the context of OOP interfaces and delegates?
+
+How would you refactor a large legacy class that violates SRP (Single Responsibility Principle)?
