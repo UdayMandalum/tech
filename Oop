@@ -30,16 +30,20 @@ How does inheritance work in C#? Can a class inherit from multiple classes?
 What is polymorphism? Explain compile-time vs runtime polymorphism.
 
 What is method overloading vs method overriding?
+overloading is complite time polymorphism, overriding is run-time
 
 What is the difference between an interface and an abstract class? When would you use each?
 
-Can a method be virtual and abstract at the same time?
+Can a method be virtual and abstract at the same time? 
+no, will give compile time error. Abstract methods are implicitly virtual
 
 What is a sealed class? Why and when would you use it?
+You want to protect internal logic or prevent modification through inheritance (e.g., utility classes, core system classes).
 
 What is the difference between new and override keywords in method hiding?
 
 Can you explain how constructors work in inheritance?
+Base class constructors are always called first, before the derived class constructor.
 
 C# questions 
 What are access modifiers in C# and how do they relate to encapsulation?
@@ -49,8 +53,11 @@ Explain the role of the base keyword in C#.
 What’s the difference between override, virtual, and abstract?
 
 How does C# implement polymorphism behind the scenes (vtable, etc.)?
+runtime polymorphism is implemented through something called the Virtual Method Table (internal lookup table)
+Each class has its own vtable that stores function pointers to its virtual method implementations
 
 What are partial classes and when should they be used?
+A partial class allows you to split the definition of a class into multiple files. Used Large Classes, Multiple Developers
 
  Scenario-Based / Practical Questions
 Design a class structure for a payment system that supports multiple payment methods (credit card, PayPal, etc.).
