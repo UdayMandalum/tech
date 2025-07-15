@@ -40,3 +40,25 @@ What is a sealed class? Why and when would you use it?
 What is the difference between new and override keywords in method hiding?
 
 Can you explain how constructors work in inheritance?
+
+C# questions 
+What are access modifiers in C# and how do they relate to encapsulation?
+
+Explain the role of the base keyword in C#.
+
+What’s the difference between override, virtual, and abstract?
+
+How does C# implement polymorphism behind the scenes (vtable, etc.)?
+
+What are partial classes and when should they be used?
+
+ Scenario-Based / Practical Questions
+Design a class structure for a payment system that supports multiple payment methods (credit card, PayPal, etc.).
+
+If you had to build a plugin-based architecture for file parsers (XML, JSON, CSV), how would you use interfaces or abstract classes?
+
+How would you test a method that relies heavily on polymorphism?
+
+In a microservices setup, how would you ensure encapsulation of domain logic?
+
+You notice frequent changes to a base class that affect many subclasses. How would you refactor?
