@@ -1,0 +1,178 @@
+📊 Class Diagram (Text-Based)
+                   +---------------------+
+                   |   IPaymentMethod    |  <interface>
+                   +---------------------+
+                   | + Pay(amount: decimal) |
+                   +---------------------+
+                          ▲     ▲     ▲
+                          |     |     |
+        +----------------+     |     +-------------------+
+        |                      |                         |
++--------------------+ +---------------------+ +---------------------+
+| CreditCardPayment  | |   PayPalPayment     | |   CryptoPayment     |
++--------------------+ +---------------------+ +---------------------+
+| +CardNumber        | | +Email              | | +WalletAddress      |
+| +CVV               | |                     | |                     |
+| +ExpiryDate        | |                     | |                     |
+| +Pay()             | | +Pay()              | | +Pay()              |
++--------------------+ +---------------------+ +---------------------+
+
+                  +---------------------------+
+                  |   PaymentMethodFactory    |  <static class>
+                  +---------------------------+
+                  | +CreatePaymentMethod(type: PaymentType): IPaymentMethod |
+                  +---------------------------+
+
+                         +-----------------------+
+                         |    PaymentProcessor   |
+                         +-----------------------+
+                         | - _paymentMethod: IPaymentMethod |
+                         | + ProcessPayment(amount: decimal) |
+                         +-----------------------+
+
+                         +--------------------+
+                         |    PaymentType     |  <enum>
+                         +--------------------+
+                         | + CreditCard       |
+                         | + PayPal           |
+                         | + Crypto           |
+                         +--------------------+
+🧠 How It All Fits Together
+IPaymentMethod defines the common contract for all payment types.
+
+CreditCardPayment, PayPalPayment, and CryptoPayment are concrete implementations of the IPaymentMethod interface.
+
+PaymentMethodFactory is responsible for instantiating the correct payment method based on the PaymentType enum.
+
+PaymentProcessor accepts any IPaymentMethod and delegates the payment processing.
+
+The PaymentType enum drives the decision logic in the factory.
+
+🏭 What Is the Factory Pattern?
+The Factory Pattern encapsulates object creation in a separate class (the "factory"), allowing you to create objects without exposing the instantiation logic to the client.
+
+The client shouldn’t know which concrete class to instantiate.
+
+You want to centralize object creation logic.
+
+You expect many types of payment methods.
+
+✅ 1. IPaymentMethod Interface
+
+public interface IPaymentMethod
+{
+    void Pay(decimal amount);
+}
+
+✅ 2. Concrete Payment Method Implementations
+
+public class CreditCardPayment : IPaymentMethod
+{
+    public string CardNumber { get; set; }
+    public string CVV { get; set; }
+    public string ExpiryDate { get; set; }
+
+    public void Pay(decimal amount)
+    {
+        Console.WriteLine($"Paid {amount:C} using Credit Card ending in {CardNumber[^4..]}");
+    }
+}
+
+public class PayPalPayment : IPaymentMethod
+{
+    public string Email { get; set; }
+
+    public void Pay(decimal amount)
+    {
+        Console.WriteLine($"Paid {amount:C} using PayPal account: {Email}");
+    }
+}
+
+public class CryptoPayment : IPaymentMethod
+{
+    public string WalletAddress { get; set; }
+
+    public void Pay(decimal amount)
+    {
+        Console.WriteLine($"Paid {amount:C} using Crypto wallet: {WalletAddress}");
+    }
+}
+
+✅ 3. Enum to Identify Payment Types
+
+public enum PaymentType
+{
+    CreditCard,
+    PayPal,
+    Crypto
+}
+
+✅ 4. Factory Class
+
+public static class PaymentMethodFactory
+{
+    public static IPaymentMethod CreatePaymentMethod(PaymentType type)
+    {
+        return type switch
+        {
+            PaymentType.CreditCard => new CreditCardPayment
+            {
+                CardNumber = "1234567812345678",
+                CVV = "123",
+                ExpiryDate = "12/25"
+            },
+            PaymentType.PayPal => new PayPalPayment
+            {
+                Email = "user@example.com"
+            },
+            PaymentType.Crypto => new CryptoPayment
+            {
+                WalletAddress = "0xABC123..."
+            },
+            _ => throw new ArgumentException("Unsupported payment type")
+        };
+    }
+}
+✅ 5. PaymentProcessor Class
+
+public class PaymentProcessor
+{
+    private readonly IPaymentMethod _paymentMethod;
+
+    public PaymentProcessor(IPaymentMethod paymentMethod)
+    {
+        _paymentMethod = paymentMethod;
+    }
+
+    public void ProcessPayment(decimal amount)
+    {
+        _paymentMethod.Pay(amount);
+    }
+}
+
+✅ 6. Client Code (Main)
+class Program
+{
+    static void Main()
+    {
+        // Create using factory
+        IPaymentMethod method1 = PaymentMethodFactory.CreatePaymentMethod(PaymentType.CreditCard);
+        PaymentProcessor processor1 = new PaymentProcessor(method1);
+        processor1.ProcessPayment(150);
+
+        IPaymentMethod method2 = PaymentMethodFactory.CreatePaymentMethod(PaymentType.PayPal);
+        PaymentProcessor processor2 = new PaymentProcessor(method2);
+        processor2.ProcessPayment(200);
+
+        IPaymentMethod method3 = PaymentMethodFactory.CreatePaymentMethod(PaymentType.Crypto);
+        PaymentProcessor processor3 = new PaymentProcessor(method3);
+        processor3.ProcessPayment(300);
+    }
+}
+
+🧠 Benefits of This Design
+Benefit	How It Helps
+Open/Closed Principle	Add new payment types without changing existing logic
+Encapsulation	Object creation is hidden from the business logic
+Separation of Concerns	Factory handles creation, processor handles payment
+Maintainability & Testing	Easier to test individual components separately
