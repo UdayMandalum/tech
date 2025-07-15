@@ -1,0 +1,125 @@
+Payment System that supports multiple payment methods like Credit Card, PayPal, and more. The design follows OOP principles and the Strategy Pattern to promote flexibility and maintainability.
+
+✅ Design Goals
+Support multiple payment methods (Credit Card, PayPal, etc.)
+
+Easy to extend with new methods (e.g., Crypto, Apple Pay)
+
+Clean interface for clients
+
+Follows SOLID principles, especially Open/Closed and Single Responsibility
+
+🔧 Class Diagram Overview
+scss
+Copy
+Edit
+IPaymentMethod (interface)
+│
+├── CreditCardPayment
+├── PayPalPayment
+├── CryptoPayment (easy to add more)
+│
+└── PaymentProcessor (uses IPaymentMethod)
+🧱 C# Implementation
+1. IPaymentMethod Interface
+csharp
+Copy
+Edit
+public interface IPaymentMethod
+{
+    void Pay(decimal amount);
+}
+2. Payment Method Implementations
+csharp
+Copy
+Edit
+public class CreditCardPayment : IPaymentMethod
+{
+    public string CardNumber { get; set; }
+    public string CVV { get; set; }
+    public string ExpiryDate { get; set; }
+
+    public void Pay(decimal amount)
+    {
+        Console.WriteLine($"Paid {amount:C} using Credit Card ending in {CardNumber[^4..]}");
+    }
+}
+
+public class PayPalPayment : IPaymentMethod
+{
+    public string Email { get; set; }
+
+    public void Pay(decimal amount)
+    {
+        Console.WriteLine($"Paid {amount:C} using PayPal account: {Email}");
+    }
+}
+
+public class CryptoPayment : IPaymentMethod
+{
+    public string WalletAddress { get; set; }
+
+    public void Pay(decimal amount)
+    {
+        Console.WriteLine($"Paid {amount:C} using Crypto wallet: {WalletAddress}");
+    }
+}
+3. PaymentProcessor Class (Context)
+csharp
+Copy
+Edit
+public class PaymentProcessor
+{
+    private readonly IPaymentMethod _paymentMethod;
+
+    public PaymentProcessor(IPaymentMethod paymentMethod)
+    {
+        _paymentMethod = paymentMethod;
+    }
+
+    public void ProcessPayment(decimal amount)
+    {
+        _paymentMethod.Pay(amount);
+    }
+}
+✅ Usage Example
+csharp
+Copy
+Edit
+class Program
+{
+    static void Main()
+    {
+        IPaymentMethod creditCard = new CreditCardPayment
+        {
+            CardNumber = "1234567812345678",
+            CVV = "123",
+            ExpiryDate = "12/25"
+        };
+
+        IPaymentMethod paypal = new PayPalPayment
+        {
+            Email = "user@example.com"
+        };
+
+        IPaymentMethod crypto = new CryptoPayment
+        {
+            WalletAddress = "0xABC123..."
+        };
+
+        PaymentProcessor processor1 = new PaymentProcessor(creditCard);
+        processor1.ProcessPayment(100);
+
+        PaymentProcessor processor2 = new PaymentProcessor(paypal);
+        processor2.ProcessPayment(200);
+
+        PaymentProcessor processor3 = new PaymentProcessor(crypto);
+        processor3.ProcessPayment(300);
+    }
+}
+🔄 Benefits of This Design
+Principle	Application
+Single Responsibility	Each class handles one thing: payment logic for its method
+Open/Closed	New payment methods can be added without modifying existing code
+Dependency Inversion	PaymentProcessor depends on abstraction (IPaymentMethod)
+
