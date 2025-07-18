@@ -3,9 +3,23 @@ A proven resuable and named solution for a recurring problem in a context
 
 Abstraction : Using Interfaces & Abstract class
 
-Single responsibility : Single reason for a class to change
-Open close principle
-Dependency Injection principle : High level modules should not depend on low level modules
+SOLID principle
+Single responsibility : Single reason for a class to change, meaning each class should focus on a one job
+Open close principle : Software entities should be open for extension, but closed for modification.
+                      Meaning: You should be able to extend behavior without changing existing code. ex using Ploymorphism
+Liskov Substitution Principle (LSP) : Subtypes must be substitutable for their base types without breaking the behavior.
+                     Meaning: Derived classes should behave correctly when used through a base class reference.
+Interface Segregation Principle (ISP) : No client should be forced to depend on methods it does not use.
+                      Meaning: Create small, specific interfaces rather than big ones.
+Dependency Inversion principle : High level modules should not depend on low level modules. Both should depend on abstractions.
+                     Meaning: Depend on interfaces, not concrete implementations.
+
+Principle	Goal	Example Fix
+SRP	One job per class	         Split logic/email/db into separate classes
+OCP	Extend without modify	     Use interfaces/polymorphism
+LSP	Substitute derived safely	 Avoid broken inheritance
+ISP	Small, client-focused interfaces	Use multiple focused interfaces
+DIP	Depend on abstractions	Inject interfaces, not classes
 
 Creational pattern
 Singleton:
