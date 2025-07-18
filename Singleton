@@ -1,0 +1,38 @@
+
+public class Singleton
+{
+	// Private constructor
+	private Singleton ()
+	{
+		// Initialize code here
+	}
+	
+	// Static variable to hold the instance 
+	private static Singleton _instance;
+	
+	//Public method to return the instance
+	
+	Public static Singleton CreateInstance()
+	{
+		if(_instance == null)
+			_instance = new Singleton();
+			
+		return _instance;	
+	}
+	
+	Public void someMethod()
+	{
+		//Implementaion
+	}
+	
+}
+
+
+// Calling class
+
+ Singleton singletonobj = Singleton.CreateInstance();
+ singletonobj.someMethod();
+
+//ReaderWriterLockSlim
+
+
