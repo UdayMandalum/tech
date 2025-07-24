@@ -10,4 +10,24 @@ Generative AI : AI that can create original content such as text , images and co
 Creating Responsible AI ( 6 Principles)
 Fairness , Reliability and Safety , Privacy and Security, inclusiveness, Transparency , Accountability
 
+Machine Learning on Azure
+Az Services : Az automated Machine Learning, Az machine learning designer
+Supervised machine learning uses Regression and classification 
+
+Regression : Predicting a numerical value based on historical data (dataset). features (inputs) and label (value to find out)
+feature engg: creating new features based on existing one 
+
+Classification : Category or class that item belongs to. 
+Binary : eg. a person is high or low risk for loan 
+Multi-class : eg. analyzing someones mood
+
+Clustering (Unsupervised) : Group similar items based on similarities , not pridicting anything , no historical data available
+
+Deep Learning: Uses artificial nural network , machine self trains itself
+Need large amount of data, high end machines, slow to train, have multiple formats. 
+Identifying patterns in unstructured data like object detection , text to speech detection
+
+Depploying a Model 
+Model performance : R2 score , 0-1 , higher is better in pridiction
+Root mean squared log err, larger meaning more errors
 
