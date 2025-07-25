@@ -1,4 +1,4 @@
-AI workloads and consideration
+I AI workloads and consideration
 AI copies the human behaviour and actions, making predictions with ML
 
 Anolamy detection : ML to analyze data over time and identify unusual changes, deviation from standard pattern
@@ -10,24 +10,46 @@ Generative AI : AI that can create original content such as text , images and co
 Creating Responsible AI ( 6 Principles)
 Fairness , Reliability and Safety , Privacy and Security, inclusiveness, Transparency , Accountability
 
-Machine Learning on Azure
+II Machine Learning on Azure
 Az Services : Az automated Machine Learning, Az machine learning designer
 Supervised machine learning uses Regression and classification 
 
-Regression : Predicting a numerical value based on historical data (dataset). features (inputs) and label (value to find out)
+1. Regression : Predicting a numerical value based on historical data (dataset). features (inputs) and label (value to find out)
 feature engg: creating new features based on existing one 
 
-Classification : Category or class that item belongs to. 
+2. Classification : Category or class that item belongs to. 
 Binary : eg. a person is high or low risk for loan 
 Multi-class : eg. analyzing someones mood
 
-Clustering (Unsupervised) : Group similar items based on similarities , not pridicting anything , no historical data available
+3. Clustering (Unsupervised) : Group similar items based on similarities , not pridicting anything , no historical data available
 
-Deep Learning: Uses artificial nural network , machine self trains itself
+4. Deep Learning: Uses artificial nural network , machine self trains itself
 Need large amount of data, high end machines, slow to train, have multiple formats. 
 Identifying patterns in unstructured data like object detection , text to speech detection
 
-Depploying a Model 
-Model performance : R2 score , 0-1 , higher is better in pridiction
+Depploying a Model using Az automated Machine Learning
+Model performance : R2 score , 0-1 , higher is better in prediction
 Root mean squared log err, larger meaning more errors
+
+Data preparation
+Cleaning
+Normalization: converting the values to same sclae of 0-1
+Splitting
+
+Model deployment : via Inference Pipelines
+can be deployed to Az Kubernetes (prefered for non-testing scenario) or containers (prefered for testing)
+
+Training our Models
+Pick Alorithm like fast training liner regression algorithm
+Validation : to check how model is performing in prediticting the label. Data is split for training and validation. 
+
+Az machine learning designer pipeline : drag and drop modules via screen . Takes several steps compared to Automated ML
+
+Classification Models
+Confusion matrix is used to score and evaluate a classification model
+            Positive    Negative
+Positive   True +ve     False -ve
+Negative   False -ve   True -ve
+
+III Computer Vision Workloads
 
