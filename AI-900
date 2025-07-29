@@ -51,5 +51,12 @@ Confusion matrix is used to score and evaluate a classification model
 Positive   True +ve     False -ve
 Negative   False -ve   True -ve
 
-III Computer Vision Workloads
+III Computer Vision Workloads :how AI can see the world
+Object detection, confident score (0-1) , bounding box , Optical Character recognition
 
+Aure AI Vision service : Standalone & Az AI Multi services
+
+Image classification : label to images to train model
+Object detection : where in the pictrue the objects are. lebeling the objects in images
+Analyzing Faces : Az AI Face service . Facial analysis , Facial recognision 
+AI Vision service is only for basic facial detection unlike Face service
