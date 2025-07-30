@@ -10,6 +10,7 @@ Generative AI : AI that can create original content such as text , images and co
 Creating Responsible AI ( 6 Principles)
 Fairness , Reliability and Safety , Privacy and Security, inclusiveness, Transparency , Accountability
 
+
 II Machine Learning on Azure
 Az Services : Az automated Machine Learning, Az machine learning designer
 Supervised machine learning uses Regression and classification 
@@ -51,12 +52,25 @@ Confusion matrix is used to score and evaluate a classification model
 Positive   True +ve     False -ve
 Negative   False -ve   True -ve
 
+
 III Computer Vision Workloads :how AI can see the world
+
 Object detection, confident score (0-1) , bounding box , Optical Character recognition
-
 Aure AI Vision service : Standalone & Az AI Multi services
-
 Image classification : label to images to train model
-Object detection : where in the pictrue the objects are. lebeling the objects in images
+Object detection : where in the pictrue the objects are. lebeling the objects in images, probablilty score is returned
 Analyzing Faces : Az AI Face service . Facial analysis , Facial recognision 
 AI Vision service is only for basic facial detection unlike Face service
+Optical Character recognition (OCR): Reading Text from Images using OCR engine , has images edition and document edition
+Azure AI Language : Can dectect language & text , text sentiments
+
+Document Intelligence : for analyzing documents and forms
+Auto match field names to values. Has several pre build models like reading reciepts, ID card, Invoices, US Tax 
+Az AI Video Indexer : Extracting insights from vedio
+
+
+IV : Natural Language Processing (NLP)
+
+
+
+
