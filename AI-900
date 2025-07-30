@@ -70,7 +70,10 @@ Az AI Video Indexer : Extracting insights from vedio
 
 
 IV : Natural Language Processing (NLP)
-
-
-
-
+services : AI Language  , Translator , Speech
+Entity recognition : entities in text and category assigned with confident score
+PII : Personally identifiable information like ph,email ,ssn
+tokenization : breaking into words , text normalization by removing punctuation and changing to lower case
+               Stop word removal by excuding words from analysis
+               N-grams are multi term pgrases
+               Stemming consolidating similar words
