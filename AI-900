@@ -62,7 +62,6 @@ Object detection : where in the pictrue the objects are. lebeling the objects in
 Analyzing Faces : Az AI Face service . Facial analysis , Facial recognision 
 AI Vision service is only for basic facial detection unlike Face service
 Optical Character recognition (OCR): Reading Text from Images using OCR engine , has images edition and document edition
-Azure AI Language : Can dectect language & text , text sentiments
 
 Document Intelligence : for analyzing documents and forms
 Auto match field names to values. Has several pre build models like reading reciepts, ID card, Invoices, US Tax 
@@ -70,10 +69,27 @@ Az AI Video Indexer : Extracting insights from vedio
 
 
 IV : Natural Language Processing (NLP)
-services : AI Language  , Translator , Speech
+
+services : AI Language  , AI Translator , AI Speech . 
+Azure AI Language : Can dectect language & text , text sentiments
 Entity recognition : entities in text and category assigned with confident score
 PII : Personally identifiable information like ph,email ,ssn
-tokenization : breaking into words , text normalization by removing punctuation and changing to lower case
+Tokenization : breaking into words , text normalization by removing punctuation and changing to lower case
                Stop word removal by excuding words from analysis
                N-grams are multi term pgrases
                Stemming consolidating similar words
+Speech recognition , Speech Synthesis via Text to Speech API
+Services : Az AI Speech , Az AI Translator , AI Language
+AI Translator : text to text translations supports 90 languages. Atomatic language dection, Dict, Profanity filters
+Language Understanding . Uttereances (Pharase) , Enttity (item) , Intent (Purpose)
+Metrix 
+Precision : % of Correct postive out of tatal positives predicted 
+Recall : % of actual positives that model predicted
+F1 score : combines precision & recall
+
+V : Generative Ai Workloads on Az
+Traditional AI immitates humans , while gen AI creates new contents
+LLM : Large Language Models
+
+Az OpenAi service
+
