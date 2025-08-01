@@ -74,10 +74,11 @@ services : AI Language  , AI Translator , AI Speech .
 Azure AI Language : Can dectect language & text , text sentiments
 Entity recognition : entities in text and category assigned with confident score
 PII : Personally identifiable information like ph,email ,ssn
-Tokenization : breaking into words , text normalization by removing punctuation and changing to lower case
+Tokenization : breaking down texts into tokens , text normalization by removing punctuation and changing to lower case
                Stop word removal by excuding words from analysis
                N-grams are multi term pgrases
                Stemming consolidating similar words
+Embedding : process of creating vectors for tokens , a way to relate words togather
 Speech recognition , Speech Synthesis via Text to Speech API
 Services : Az AI Speech , Az AI Translator , AI Language
 AI Translator : text to text translations supports 90 languages. Atomatic language dection, Dict, Profanity filters
@@ -91,5 +92,5 @@ V : Generative Ai Workloads on Az
 Traditional AI immitates humans , while gen AI creates new contents
 LLM : Large Language Models
 
-Az OpenAi service
+
 
