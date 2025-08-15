@@ -5,8 +5,21 @@ scalability : Isloate workloads to undertand the scaling needs based on the capa
 Microservices should be loosely coupled 
 Consider Network latency, communication failure (availability)
 
-Remote Procedure call (RPC) : eg. Rest endpoint . Good when dependency relationship is simple and stable
-Message-driven : Messages published in a fire and forget manner via Message broker. Eliminates effects of Latency & Availability. Incorporates queing mechanism.
+Key Advantages of Microservices
+Independent Deployment	Each service can be deployed on its own without redeploying the whole system. This reduces deployment risk and increases agility.
+Technology Flexibility	Each microservice can use the most appropriate technology stack (language, database, framework) rather than forcing one stack across the entire system.
+Scalability	You can scale only the services that need more resources instead of scaling the whole application. Leads to better use of infrastructure and reduced cost.
+Better Fault Isolation	If one microservice fails, it doesn’t bring down the entire system. Other services continue to work.
+Smaller, Focused Codebases	Services are smaller and focused on a single business capability → easier to understand, develop, test, and maintain.
+Faster Time to Market	Small, independent teams can work in parallel on different services without blocking each other. New features can be delivered faster.
+Organizational Alignment	Teams align around business areas (e.g., Payments Service, Order Service), improving ownership and domain understanding.
+Easier Continuous Delivery	Because services are loosely coupled and independently deployable, automated CI/CD pipelines become easier to implement.
+Reusability	Services can be reused across multiple products / channels (ex: the same User Profile Service can be used by the web app and mobile app).
+Supports Event-Driven Design	Microservices naturally encourage asynchronous communication patterns, enabling true event-driven architecture with message brokers or Kafka.
+
+Remote Procedure call (RPC) : eg. Rest endpoint . Good when dependency relationship is simple and stable . Example Workbench UI=> Business Layer => SQL cache service, OLAP service=> 
+Message-driven : Messages published in a fire and forget manner via Message broker. Eliminates effects of Latency & Availability. Incorporates queing mechanism. 
+              Ex. Bond Index Restatement : Impact analysis service (Queued) 
 
 Kafka is a distributed event streaming platform that acts like a high-performance, fault-tolerant message broker.
 It’s used to publish, store, and consume messages (called events) in real time or near real time.
@@ -28,4 +41,7 @@ Step 4 – Decoupling & Scalability
 Producers don’t need to know who is consuming their messages.
 You can add more consumers to scale processing — Kafka will balance partitions across them.
 Services can be updated, redeployed, or even offline temporarily without breaking the flow (Kafka buffers messages until they’re processed).
+
+Versioning of service makes it possible to change a service without breaking other services that depends on it. Other services can use the deprecated version till they 
+change the code to use the new version. 
 
