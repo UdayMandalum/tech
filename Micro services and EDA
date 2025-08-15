@@ -1,0 +1,31 @@
+Microservices vs Monolothis 
+Advantage is when handeling 
+complexity : Breakdown of program helps developemnt with diferrent teams , deplyments 
+scalability : Isloate workloads to undertand the scaling needs based on the capacity needs
+Microservices should be loosely coupled 
+Consider Network latency, communication failure (availability)
+
+Remote Procedure call (RPC) : eg. Rest endpoint . Good when dependency relationship is simple and stable
+Message-driven : Messages published in a fire and forget manner via Message broker. Eliminates effects of Latency & Availability. Incorporates queing mechanism.
+
+Kafka is a distributed event streaming platform that acts like a high-performance, fault-tolerant message broker.
+It’s used to publish, store, and consume messages (called events) in real time or near real time.
+
+Step 1 – Producers send messages to Kafka
+Producers are your data sources or services that create messages.
+They send these messages to Kafka topics (like named channels).
+
+Step 2 – Kafka stores the messages
+Messages are written to partitions inside the topic.
+Kafka persists messages to disk, replicates them for fault tolerance, and keeps them for a configured retention period (even after consumers read them).
+This means multiple consumers can read the same message independently at different times.
+
+Step 3 – Consumers process messages
+Consumers subscribe to topics.
+They pull messages from Kafka and process them asynchronously.
+
+Step 4 – Decoupling & Scalability
+Producers don’t need to know who is consuming their messages.
+You can add more consumers to scale processing — Kafka will balance partitions across them.
+Services can be updated, redeployed, or even offline temporarily without breaking the flow (Kafka buffers messages until they’re processed).
+
