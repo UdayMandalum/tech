@@ -3,11 +3,16 @@ so the entire DOM is not recreated unlike javascript
 benefit is fast UI and better user experiance 
 
 Component : javascript function that returns JSX , looks like HTML, alternative way to write js
-JSX : has hirarcy of components
-Babel & SWC (Transpiler) tool coverts the JSX to JS
+JSX (Javascript Extension) : has hirarcy of components
+Babel & SWC (Transpiler) tool coverts the JSX to JS o complier can understand
 React DOM renders to html 
 
-Tools : Vite , Next.js
+Components => JSX => Transpiler => Javascript => React DOM Library => HTML
+
+Tools : Starting point sthat create templates , transforming JSX to JS, process JS for SPA , dev web server, auto browser updates
+Vite , Next.js 
+
+
 
 
 🧱 Prerequisites
