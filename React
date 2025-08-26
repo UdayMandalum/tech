@@ -12,7 +12,9 @@ Components => JSX => Transpiler => Javascript => React DOM Library => HTML
 Tools : Starting point sthat create templates , transforming JSX to JS, process JS for SPA , dev web server, auto browser updates
 Vite , Next.js 
 
-
+cd myviteapp
+npm run dev
+npm run lint
 
 
 🧱 Prerequisites
