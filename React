@@ -12,8 +12,25 @@ Components => JSX => Transpiler => Javascript => React DOM Library => HTML
 Tools : Starting point sthat create templates , transforming JSX to JS, process JS for SPA , dev web server, auto browser updates
 Vite , Next.js 
 
+create new app
+Install node.js
+
+npx create-react-app my-first-react-app
+npm start
+npm install bootstrap
+npm run build
+
+Vite app
+
+npm create vite@latest myviteapp : Create a React App with Vite
+cd my-vite-app
+npm install : Install dependencies
+
+
+
+Open existing app
 cd myviteapp
-npm run dev
+npm run dev : Run the dev server
 npm run lint
 
 
