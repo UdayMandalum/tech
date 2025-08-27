@@ -37,3 +37,7 @@ Props : A way to pass arguments to components. Read only. Better reusability of 
 Prop types is used to specify the type of arg value being passed.  deprecated by Vite , instead use Type script.
 key prop : When rendering a list , key prop helps React to identify which items have changed, been added, or remove, so rendering is efficient and in right order
 
+Hooks: built in and custom. They are functions
+State : components private data, introduced by state hook
+
+pure function , memo hook, effect 
