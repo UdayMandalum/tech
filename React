@@ -1,3 +1,4 @@
+
 Reconcilation : react takes the copy of the DOM and compares what has changed and the difference is applied in brower 
 so the entire DOM is not recreated unlike javascript
 benefit is fast UI and better user experiance 
@@ -37,7 +38,13 @@ Props : A way to pass arguments to components. Read only. Better reusability of 
 Prop types is used to specify the type of arg value being passed.  deprecated by Vite , instead use Type script.
 key prop : When rendering a list , key prop helps React to identify which items have changed, been added, or remove, so rendering is efficient and in right order
 
-Hooks: built in and custom. They are functions
+Hooks: built in and custom. They are functions . https://react.dev/reference/react/hooks
 State : components private data, introduced by state hook
+Performance Hooks : optimize re-rendering performance is to skip unnecessary work.tell React to reuse a cached calculation or to skip a re-render if the data has not changed since the previous render.
+useMemo lets you cache the result of an expensive calculation.
 
 pure function , memo hook, effect 
+
+fetch is a built-in JavaScript function (available in browsers and Node.js since v18).
+It’s used to make HTTP requests (GET, POST, PUT, DELETE, etc.) to servers or APIs.
+It returns a Promise, which resolves to a Response object.
