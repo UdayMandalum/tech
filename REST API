@@ -29,3 +29,22 @@ Disigning associations : building relationships of resources like site => locati
 Pagination : Query string is commonly used. like page # & paze size. respond header could have count and the page number , next & prev page
 Error Handling : return error code and description without compramizing security.
 caching : Entity Tags (Etags). compare versions that cleint has to server. Done by users of the API
+Functional API : Exception to REST , using verbs like restartserver. could use Options verbs
+Asyncronous API : Comet, gRPC, SignalR, Firebase, Socket.IO
+
+Versioning : Evolve the API without breaking the cleints
+URI Path : e.g. https://foo.org/api/v2/Customers . very clear but URi will need to change with versions
+Query String : e.g. https://foo.org/api/Customers?v-2.0 . Use default if version is not specified. Clients may miss.
+Headers : sophisticated development, less discoverable. Specifiy in teh accept header. e,g, Accept: application/json;version=2.0
+Content Type: more complex
+
+Locking down API 
+Cross Origin Resource Sharing (CORS): Cross domain security to avoid cross site scripting . access based on domain , resource and verb.
+Authentication and Authorization : e.g. AppId + Key
+Cookies : easy and common , prob is request forgery 
+Basic Auth : easy but not secure unless paired with SSL, send credentials on every request
+Token Based Auth : Token expire much faster than cookies (15-20 mins) Client => sends credentials => server => returns token => client => Includes token with calls => Server => Validates calls
+ e.g. JWT : Industry standard , self contained , small and complete. Has User information , claims, validation signature 
+OAuth : 3rd party app to validate. API does not hold the credentials. 
+
+
