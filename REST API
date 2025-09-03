@@ -6,12 +6,12 @@ RPC : Good for internal APIs for high performance connections. Uses binary seril
 e.g. gRPC, Apache Thrift. Fater than REST JSON over HTTP approach. Action oriented unlike REST which is resource oriented approach. 
 
 REST 
-  Seperation of client and server, stateless requests, chacheble 
+  Seperation of client and server, stateless requests, chacheble , uniform interface (URI)
 Resource : represents things and not actions
 
 Passing data to API 
 Path parameter : e.g. /event/123
-Query parameter : e.g. /event?city=NYC
+Query parameter : e.g. /event?city=NYC pageination, page size
 Request body : payloads for post
 
 verbs : get, post, put,patch, delete
@@ -24,5 +24,8 @@ content : response body usually json, images , blobs
 
 Security : API Key , JWT (json web token)
 
-
-
+Prefer noun over verbs
+Disigning associations : building relationships of resources like site => locations . Should not be complicated. Balance bet query and association of resources
+Pagination : Query string is commonly used. like page # & paze size. respond header could have count and the page number , next & prev page
+Error Handling : return error code and description without compramizing security.
+caching : Entity Tags (Etags). compare versions that cleint has to server. Done by users of the API
