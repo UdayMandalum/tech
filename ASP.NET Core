@@ -1,0 +1,14 @@
+ASP.NET core 8.0 
+
+Web application framework for front end and backend, Open source , Cross platform
+Each asp.net core app can carry its own runtime version with it
+
+Tools : Visual Studio (Windows only) , Rider , VS Code (works with CLI)
+Kestrel Web Server : Built in web server
+
+Front end : MVC (more complex), Razor pages (Server Rendered), Blazor (Client Rendered) . 
+Backend : Web API , gRPC
+Supporting : SignalR
+
+Razor : HTML with option to embed C# code
+MVC : Browser request => Controler (does the action) => Model (data is put here) => View (consumes data and renders)
