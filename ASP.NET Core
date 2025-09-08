@@ -12,3 +12,6 @@ Supporting : SignalR
 
 Razor : HTML with option to embed C# code
 MVC : Browser request => Controler (does the action) => Model (data is put here) => View (consumes data and renders)
+httpclient is used to consume an API
+Minimal API : Uses MapGet instead of Controllar model 
+gRPC : Uses RPC call using HTTP 2 or 3 protocol , binary serilization called Protocol buffers, contract for methods, good for internal use
