@@ -15,3 +15,4 @@ MVC : Browser request => Controler (does the action) => Model (data is put here)
 httpclient is used to consume an API
 Minimal API : Uses MapGet instead of Controllar model 
 gRPC : Uses RPC call using HTTP 2 or 3 protocol , binary serilization called Protocol buffers, contract for methods, good for internal use
+SignalR : Sends message to all connected client. 2 way communication.
