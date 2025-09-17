@@ -92,5 +92,8 @@ V : Generative Ai Workloads on Az
 Traditional AI immitates humans , while gen AI creates new contents
 LLM : Large Language Models
 
+Storage queues and Service Bus queues
+Storage queues are part of the Azure Storage infrastructure. They allow you to store large numbers of messages. You access messages from anywhere in the world via authenticated calls using HTTP or HTTPS. A queue message can be up to 64 KB in size. A queue might contain millions of messages, up to the total capacity limit of a storage account. Queues are commonly used to create a backlog of work to process asynchronously. For more information, see What are Azure Storage queues.
 
+Service Bus queues are part of a broader Azure messaging infrastructure that supports queuing, publish/subscribe, and more advanced integration patterns. They're designed to integrate applications or application components that might span multiple communication protocols, data contracts, trust domains, or network environments. For more information about Service Bus queues/topics/subscriptions, see the Service Bus queues, topics, and subscriptions.
 
