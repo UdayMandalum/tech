@@ -1,0 +1,4 @@
+C# is trong type language 
+Var type : type conversion need to be explicit. For implicit conversion var type is used. type is infered by C# at complite time. use of var is required in LINQ
+switch vs if. switch complies to a lookup table, allowing the allowing program to jump to the matching case, the expression is evaluated only once. 
+ If evaluates conditions sequencially. should be used when condition to evaluate is complex and case are few, say 3 or less. 
