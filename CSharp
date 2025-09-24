@@ -1,8 +1,17 @@
-C# is trong type language 
-Var type : type conversion need to be explicit. For implicit conversion var type is used. type is infered by C# at complite time. use of var is required in LINQ
-switch vs if. switch complies to a lookup table, allowing the allowing program to jump to the matching case, the expression is evaluated only once. 
+C# is strong type language 
+Var type : type conversion need to be explicit. For implicit conversion var type is used. type is inferred by C# at complite time. use of var is required in LINQ
+switch vs if. switch complies to a lookup table, allowing the program to jump to the matching case, the expression is evaluated only once. 
  If evaluates conditions sequencially. should be used when condition to evaluate is complex and case are few, say 3 or less. 
 Strings, Array are reference types . Struct , Enumerations are value types
 custom Types : Class, struct , Enumeration, Interface , Deligate
 Enumeration : Giving name to a numerical value
 Struct: Value type, similar to class like properties and methods. no garbage collection overheads. no unintended changes to original. 
+Array
+int [] arr = new int[5]; size once specified is fixed , channot be changed
+int [] arr = new int[] {1,2,3,4,5};
+Employee[] employees = new Employee[7];
+CopyTo() , Sort(), Reverse(), Length
+
+Collections : built in classes in dotnet
+List<int> _list = new List<int> (); Add, Remove , Insert, Contains , Count, ToArray, clear . List are type safe . 
+
