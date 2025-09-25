@@ -19,10 +19,11 @@ Nunit & xUnit : Arrage, Act & Assert
 
 LINQ defines the extension method on IEnumerable<T> 
 IEnumerable<string> seq = new[] {'www','eee', 'rrr'}; seq.First(); seq.Single(); Take(2), Skip(1)
+
 IEnumerable<T> is the core interface for iterable collections in C# (e.g., lists, arrays)
-You typically use IEnumerable<T> manually when you want to create a custom sequence of data that can be iterated over lazily, without storing the entire collection in memory.
-This is particularly useful in scenarios where you need to generate or process data on-the-fly, such as when dealing with large datasets, streaming data, or dynamic sequences. Using IEnumerable<T> with yield return allows for efficient, deferred execution, as values are computed only when the consumer iterates over them.
+You typically use IEnumerable<T> manually when you want to create a custom sequence of data that can be iterated over lazily (Lazy Evaluation), without storing the entire collection in memory.
+This means that the elements of the collection are not necessarily loaded into memory or processed until they are actually requested during iteration. This can be beneficial for performance and memory usage, especially with large datasets
 
 Generics in C# is a feature introduced in C# 2.0 that allows you to define classes, methods, interfaces, or other types with placeholder types (type parameters).
 These placeholders are replaced with specific types when the generic type or method is used, enabling type-safe, reusable, and efficient code without sacrificing performance.
-Generics are commonly used with collections (e.g., List<T>, Dictionary<TKey, TValue>), but they can also be applied to custom classes, structs, interfaces, and methods.
+Generics are commonly used with collections (e.g., List<T>, Dictionary<TKey, TValue>), but they can also be applied to custom classes, structs, interfaces, and methods. Example Sorting
