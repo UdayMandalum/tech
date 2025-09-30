@@ -27,3 +27,19 @@ This means that the elements of the collection are not necessarily loaded into m
 Generics in C# is a feature introduced in C# 2.0 that allows you to define classes, methods, interfaces, or other types with placeholder types (type parameters).
 These placeholders are replaced with specific types when the generic type or method is used, enabling type-safe, reusable, and efficient code without sacrificing performance.
 Generics are commonly used with collections (e.g., List<T>, Dictionary<TKey, TValue>), but they can also be applied to custom classes, structs, interfaces, and methods. Example Sorting
+
+Asynchronous Web Request : 
+Task Parallel Library : GetAsync,  async & await keywords are contextual keywords always used togather. 
+private async void search() : async indicates that the method will contain async operations 
+
+private async void Search()
+{
+ using(var client = new HttpClient())
+ {
+  var response = await client.GetAsync(URL);
+  var content = await response.content.ReadasStringAsync();
+ }
+
+}
+
+Parallel Programming : for CPU bound operations
