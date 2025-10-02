@@ -28,9 +28,19 @@ Generics in C# is a feature introduced in C# 2.0 that allows you to define class
 These placeholders are replaced with specific types when the generic type or method is used, enabling type-safe, reusable, and efficient code without sacrificing performance.
 Generics are commonly used with collections (e.g., List<T>, Dictionary<TKey, TValue>), but they can also be applied to custom classes, structs, interfaces, and methods. Example Sorting
 
+Deelegates : They are the type-safe mechanism in C# for passing methods as arguments (like a function pointer)
+
 Asynchronous Web Request : 
-Task Parallel Library : GetAsync,  async & await keywords are contextual keywords always used togather. 
+ GetAsync function,  async & await keywords are contextual keywords always used togather. 
 private async void search() : async indicates that the method will contain async operations 
+ 
+•	The async keyword enables the use of the await keyword inside the method, allowing you to asynchronously wait for operations (like I/O, HTTP requests, etc.).
+•	The method returns a Task, which represents the ongoing operation. Callers can await this task to asynchronously wait for its completion.
+•	If the method needs to return a value, you use async Task<T> instead, where T is the return type.
+
+call the API method as task. This does not block the main thread.
+await the API response when needed.
+
 
 private async void Search()
 {
@@ -42,4 +52,8 @@ private async void Search()
 
 }
 
+Task Parallel Library (TPL)
 Parallel Programming : for CPU bound operations
+
+Task.Run() schedules a delegate (e.g., a lambda expression or method) to run on a thread pool thread.
+The thread pool is a managed set of reusable threads, optimized for short-lived tasks.optimizing for CPU usage and resource constraints.
