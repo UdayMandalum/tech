@@ -2,7 +2,7 @@
 C# is strong type language 
 Var type : type conversion need to be explicit. For implicit conversion var type is used. type is inferred by C# at complite time. use of var is required in LINQ
 switch vs if. switch complies to a lookup table, allowing the program to jump to the matching case, the expression is evaluated only once. 
- If evaluates conditions sequencially. should be used when condition to evaluate is complex and case are few, say 3 or less. 
+ It evaluates conditions sequencially. should be used when condition to evaluate is complex and case are few, say 3 or less. 
 Strings, Array are reference types . Struct , Enumerations are value types
 custom Types : Class, struct , Enumeration, Interface , Deligate
 Enumeration : Giving name to a numerical value
@@ -28,7 +28,11 @@ Generics in C# is a feature introduced in C# 2.0 that allows you to define class
 These placeholders are replaced with specific types when the generic type or method is used, enabling type-safe, reusable, and efficient code without sacrificing performance.
 Generics are commonly used with collections (e.g., List<T>, Dictionary<TKey, TValue>), but they can also be applied to custom classes, structs, interfaces, and methods. Example Sorting
 
-Deelegates : They are the type-safe mechanism in C# for passing methods as arguments (like a function pointer)
+Delegates : They are the type-safe mechanism in C# for passing methods as arguments (like a function pointer)
+Also used associate event handlers with events by defining the method signature. Task.Run() schedules a delegate 
+
+Lambda expressions are the modern, recommended standard for creating inline, anonymous functions
+=>: This is the lambda operator. It means "goes to" or "is defined as."
 
 Asynchronous Web Request : 
  GetAsync function,  async & await keywords are contextual keywords always used togather. 
