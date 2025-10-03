@@ -63,6 +63,7 @@ A partial class allows you to split the definition of a class into multiple file
 Design a class structure for a payment system that supports multiple payment methods (credit card, PayPal, etc.).
 
 If you had to build a plugin-based architecture for file parsers (XML, JSON, CSV), how would you use interfaces or abstract classes?
+I would use an Interface as the core contract for the plugins and an Abstract Class to handle common, non-optional logic shared by most parsers.
 
 How would you test a method that relies heavily on polymorphism?
 
