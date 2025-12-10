@@ -1,0 +1,5 @@
+create variable with keyword, let, const, var
+has GC, uses dynamic typing 
+datatypes : 
+Primitives , stored on stack , immutible , passed by value : Boolean, Number, BigInt, String, Symbol, Nuklk , Undefined
+Objects : on heap, passed by ref : Olain objects, Functions, Collections, Dates, Class instances, Errors, Promises
