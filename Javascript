@@ -3,3 +3,6 @@ has GC, uses dynamic typing
 datatypes : 
 Primitives , stored on stack , immutible , passed by value : Boolean, Number, BigInt, String, Symbol, Nuklk , Undefined
 Objects : on heap, passed by ref : Olain objects, Functions, Collections, Dates, Class instances, Errors, Promises
+
+Map: Any datatype can be used as a key , like C# Dictionary 
+Set : has unique set of values , like C# Hashset
