@@ -24,6 +24,10 @@ Message-driven : Messages published in a fire and forget manner via Message brok
 Kafka is a distributed event streaming platform that acts like a high-performance, fault-tolerant message broker.
 It’s used to publish, store, and consume messages (called events) in real time or near real time.
 
+Apache Kafka is an open-source, distributed event streaming platform engineered for high performance, scalability, and durability.
+It uses producers to send messages to topics, and consumers to read them, with messages being stored in ordered, immutable partitions across multiple brokers (servers).
+It is highly suited for real-time data processing and asynchronous message queuing in system design.
+
 Step 1 – Producers send messages to Kafka
 Producers are your data sources or services that create messages.
 They send these messages to Kafka topics (like named channels).
@@ -44,4 +48,9 @@ Services can be updated, redeployed, or even offline temporarily without breakin
 
 Versioning of service makes it possible to change a service without breaking other services that depends on it. Other services can use the deprecated version till they 
 change the code to use the new version. 
+
+Consumer Retries:  own retry logic. One common pattern is to set up a custom topic that we can move failed messages to and then have a separate consumer that processes
+these messages. This way, we can retry messages as many times as we want without affecting the main consumer. 
+If a given message is retried too many times, we can move it to a dead letter queue (DLQ). DLQs are just a place to store failed messages so that we can investigate them later.
+
 
