@@ -44,9 +44,9 @@ private async void search() : async indicates that the method will contain async
 
 call the API method as task. This does not block the main thread.
 await the API response when needed.
+Always use async Task if method returns nothing. use sync void only for event handellers.
 
-
-private async void Search()
+private async Task Search()
 {
  using(var client = new HttpClient())
  {
@@ -56,8 +56,25 @@ private async void Search()
 
 }
 
-Task Parallel Library (TPL)
+Task Parallel Library (TPL) 
 Parallel Programming : for CPU bound operations
+Task is a way to respresent a asyn operation
 
 Task.Run() schedules a delegate (e.g., a lambda expression or method) to run on a thread pool thread.
 The thread pool is a managed set of reusable threads, optimized for short-lived tasks.optimizing for CPU usage and resource constraints.
+Error Handling : Exceptions are captured in the Task and propagated via await.
+Task.Run() uses the .NET thread pool, which reuses a small number of threads for multiple tasks, reducing overhead. 
+The thread pool is managed by the runtime, optimizing for CPU usage and resource constraints.
+Task.Run() supports cancellation via CancellationToken, allowing clean task termination:
+
+Use Task.Run() when 
+You have CPU-bound work (heavy calculation)
+You have legacy synchronous blocking code
+You want to run something in background thread
+
+Don't use, when you already have proper async API. Just await the method
+
+
+
+
+
