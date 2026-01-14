@@ -2,11 +2,13 @@
 C# is strong type language 
 Var type : type conversion need to be explicit. For implicit conversion var type is used. type is inferred by C# at complite time. use of var is required in LINQ
 switch vs if. switch complies to a lookup table, allowing the program to jump to the matching case, the expression is evaluated only once. 
- It evaluates conditions sequencially. should be used when condition to evaluate is complex and case are few, say 3 or less. 
+ IF evaluates conditions sequencially. should be used when condition to evaluate is complex and case are few, say 3 or less. 
 Strings, Array are reference types . Struct , Enumerations are value types
 custom Types : Class, struct , Enumeration, Interface , Deligate
 Enumeration : Giving name to a numerical value
 Struct: Value type, similar to class like properties and methods. no garbage collection overheads. no unintended changes to original. 
+     When you need to represent a small, simple data structure that holds a few fields (e.g., coordinates, points, or measurements).
+     have lower memory overhead since they don’t require heap allocation or garbage collection.
 Array
 int [] arr = new int[5]; size once specified is fixed , channot be changed
 int [] arr = new int[] {1,2,3,4,5};
@@ -24,9 +26,17 @@ IEnumerable<T> is the core interface for iterable collections in C# (e.g., lists
 You typically use IEnumerable<T> manually when you want to create a custom sequence of data that can be iterated over lazily (Lazy Evaluation), without storing the entire collection in memory.
 This means that the elements of the collection are not necessarily loaded into memory or processed until they are actually requested during iteration. This can be beneficial for performance and memory usage, especially with large datasets
 
+LINQ (Language Integrated Query) is a feature in C# that allows you to query data from various sources (e.g., collections, databases, XML, etc.)
+using a consistent, SQL-like syntax directly within C#. 
+Introduced in C# 3.0, LINQ provides a declarative way to filter, sort, group, and transform data, making code more readable and concise.
+It works with any data source that implements IEnumerable<T> or IQueryable<T>.
+Method syntax is more concise for simple queries; query syntax is better for complex queries with joins or grouping.
+
 Generics in C# is a feature introduced in C# 2.0 that allows you to define classes, methods, interfaces, or other types with placeholder types (type parameters).
 These placeholders are replaced with specific types when the generic type or method is used, enabling type-safe, reusable, and efficient code without sacrificing performance.
 Generics are commonly used with collections (e.g., List<T>, Dictionary<TKey, TValue>), but they can also be applied to custom classes, structs, interfaces, and methods. Example Sorting
+Type Safety: Generics ensure compile-time type checking, preventing runtime errors from incorrect type usage (unlike non-generic collections like ArrayList).
+Reusability: Write a single generic class/method that works with any type, reducing code duplication.
 
 Delegates : They are the type-safe mechanism in C# for passing methods as arguments (like a function pointer)
 Also used associate event handlers with events by defining the method signature. Task.Run() schedules a delegate 
