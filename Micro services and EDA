@@ -53,4 +53,5 @@ Consumer Retries:  own retry logic. One common pattern is to set up a custom top
 these messages. This way, we can retry messages as many times as we want without affecting the main consumer. 
 If a given message is retried too many times, we can move it to a dead letter queue (DLQ). DLQs are just a place to store failed messages so that we can investigate them later.
 
+MassTransit : .NET messaging abstraction framework that can sit on top of Kafka (or RabbitMQ, Azure Service Bus, etc.) and make them easier to use.
 
