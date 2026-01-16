@@ -31,6 +31,7 @@ using a consistent, SQL-like syntax directly within C#.
 Introduced in C# 3.0, LINQ provides a declarative way to filter, sort, group, and transform data, making code more readable and concise.
 It works with any data source that implements IEnumerable<T> or IQueryable<T>.
 Method syntax is more concise for simple queries; query syntax is better for complex queries with joins or grouping.
+SelectMany() :In a nested data structure, allows combining parent and child data into a new structure
 
 Generics in C# is a feature introduced in C# 2.0 that allows you to define classes, methods, interfaces, or other types with placeholder types (type parameters).
 These placeholders are replaced with specific types when the generic type or method is used, enabling type-safe, reusable, and efficient code without sacrificing performance.
@@ -75,7 +76,8 @@ The thread pool is a managed set of reusable threads, optimized for short-lived 
 Error Handling : Exceptions are captured in the Task and propagated via await.
 Task.Run() uses the .NET thread pool, which reuses a small number of threads for multiple tasks, reducing overhead. 
 The thread pool is managed by the runtime, optimizing for CPU usage and resource constraints.
-Task.Run() supports cancellation via CancellationToken, allowing clean task termination:
+Task.Run() supports cancellation via CancellationToken, allowing clean task termination. 
+The cancellation token checks if the cancellation has been requested through the cancellation token source. The cancellation logic has to handel cancellation gracefully.
 
 Use Task.Run() when 
 You have CPU-bound work (heavy calculation)
@@ -84,7 +86,9 @@ You want to run something in background thread
 
 Don't use, when you already have proper async API. Just await the method
 
+Dispacher.Invoke() This this from async method to update the UI thread. 
+Task.WhenAll(task collection) : Takes in a collections of Tasks and await till all of them are complete.
+Task.WhenAny : returns the first task that got completed from a list of tasks.
 
-
-
-
+PLINQ : Parallel implementation of LINQ . AsParallel() : add this as part of LINQ query before select. AsOrdered() , Take()
+Specifying AsParallel will analyze the query to decided whether or not parallelisium should be used. 
