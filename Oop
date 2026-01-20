@@ -25,7 +25,7 @@ What are the four pillars of OOP? Explain each with examples.
 
 What is the difference between abstraction and encapsulation?
 
-How does inheritance work in C#? Can a class inherit from multiple classes?
+How does inheritance work in C#? Can a class inherit from multiple classes? no
 
 What is polymorphism? Explain compile-time vs runtime polymorphism.
 
@@ -35,7 +35,7 @@ overloading is complite time polymorphism, overriding is run-time
 What is the difference between an interface and an abstract class? When would you use each?
 
 Can a method be virtual and abstract at the same time? 
-no, will give compile time error. Abstract methods are implicitly virtual
+no, will give compile time error. A single method cannot simultaneously have a body of code (virtual) and not have a body of code (abstract). 
 
 What is a sealed class? Why and when would you use it?
 You want to protect internal logic or prevent modification through inheritance (e.g., utility classes, core system classes).
@@ -47,6 +47,13 @@ Base class constructors are always called first, before the derived class constr
 
 C# questions 
 What are access modifiers in C# and how do they relate to encapsulation?
+Modifier 	Description	Accessibility Scope
+public	Fully accessible by any other code.	Everywhere
+protected	Accessible within its defining class and any derived classes (subclasses).	Class & Derived Classes
+internal	Accessible only within the current containing assembly (e.g., your current project file).	Current Assembly Only
+protected internal	Accessible within the current assembly OR any derived class (combines protected and internal).	Current Assembly OR Derived Classes
+private protected	Accessible only within its defining class AND any derived classes within the same assembly.	Class AND Derived Classes (Assembly Limited)
+private	Accessible only within the body of the class or struct in which it is declared.	Class Only
 
 Explain the role of the base keyword in C#.
 
