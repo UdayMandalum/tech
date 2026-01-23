@@ -5,12 +5,30 @@ always backwards compatible
 caniuse.com => engines supporting features 
 https://developer.mozilla.org/en-US/docs/Web/JavaScript
 
+Hoisting is JavaScript's default behavior of moving declarations to the top of their containing scope (global or function/block scope) during the compilation phase.
+Unlike function declarations, class declarations are not hoisted
 
 create variable with keyword, let, const, var
+var: Function-scoped or globally-scoped. It can be redeclared and updated. Variables declared with var are hoisted to the top of their scope and initialized with undefined.
+let: Block-scoped (within {}). It can be updated but not redeclared within the same scope. It is also hoisted but accessing it before the declaration results in a ReferenceError (known as the "temporal dead zone").
+const: Block-scoped. It cannot be redeclared or updated after its initial assignment. For objects and arrays, the reference cannot be changed, but their properties/elements can be modified. 
+
+== (loose equality): Checks for value equality, performing type coercion (automatically converting types) before comparison.
+Example: 3 == "3" is true.
+=== (strict equality): Checks if both the value and the type are the same without any type conversion.
+Example: 3 === "3" is false. 
+
 has GC, uses dynamic typing 
 datatypes : 
 Primitives , stored on stack , immutible , passed by value : Boolean, Number, BigInt, String, Symbol, Nuklk , Undefined
 Objects : on heap, passed by ref : Olain objects, Functions, Collections, Dates, Class instances, Errors, Promises
 
-Map: Any datatype can be used as a key , like C# Dictionary 
+Map (object): Any datatype can be used as a key , like C# Dictionary . This is different than array.map 
 Set : has unique set of values , like C# Hashset
+
+Promises represent the eventual completion (or failure) of an asynchronous operation and its resulting value.
+A Promise can be in one of three states: 
+Pending: Initial state; the operation has not completed yet.
+Fulfilled (Resolved): The operation completed successfully, and the promise has a resulting value.
+Rejected: The operation failed, and the promise has a reason for the failure (an error).
+Once a promise is settled (either fulfilled or rejected), it cannot change states again. 
