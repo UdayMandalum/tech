@@ -1,3 +1,11 @@
+JavaScript (JS) is a lightweight interpreted programming language. 
+
+Javascript Engine: V8 (Chrome, MS Edge) , JS Core (Safari) , Spider Monkey (FireFox ) , Node.js (Server & Local Computer) 18x LTS version
+always backwards compatible 
+caniuse.com => engines supporting features 
+https://developer.mozilla.org/en-US/docs/Web/JavaScript
+
+
 create variable with keyword, let, const, var
 has GC, uses dynamic typing 
 datatypes : 
