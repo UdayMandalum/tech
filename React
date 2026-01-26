@@ -38,8 +38,11 @@ Props : A way to pass arguments to components. Read only. Better reusability of 
 Prop types is used to specify the type of arg value being passed.  deprecated by Vite , instead use Type script.
 key prop : When rendering a list , key prop helps React to identify which items have changed, been added, or remove, so rendering is efficient and in right order
 
-Hooks: built in and custom. They are functions . https://react.dev/reference/react/hooks
-State : components private data, introduced by state hook
+Hooks: Hooks let you use different React features from your components. built in and custom. They are functions . https://react.dev/reference/react/hooks
+State : (like asp.net view state) components private data, introduced by state hook . State lets a component “remember” information like user input. For example, a form component can use state to store the input value.
+Context Hooks : Context lets a component receive information from distant parents without passing it as props. For example, your app’s top-level component can pass the current UI theme to all components below, no matter how deep.
+Ref Hooks : Refs let a component hold some information that isn’t used for rendering, like a DOM node or a timeout ID. Unlike with state, updating a ref does not re-render your component. Refs are an “escape hatch” from the React paradigm. They are useful when you need to work with non-React systems, such as the built-in browser APIs.
+Effect Hooks : Effects let a component connect to and synchronize with external systems. This includes dealing with network, browser DOM, animations, widgets written using a different UI library, and other non-React code.
 Performance Hooks : optimize re-rendering performance is to skip unnecessary work.tell React to reuse a cached calculation or to skip a re-render if the data has not changed since the previous render.
 useMemo lets you cache the result of an expensive calculation.
 
