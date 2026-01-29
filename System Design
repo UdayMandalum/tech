@@ -1,0 +1,21 @@
+gRPC is worth mentioning for internal service-to-service communication when performance is critical. It uses binary serialization and HTTP/2, 
+making it significantly faster than JSON over HTTP. But you won't use it for public-facing APIs because browser support is limited. 
+A common pattern is REST for external APIs and gRPC internally.
+REST: It maps resources to URLs and uses HTTP methods to manipulate them
+
+ Authentication, use JWT tokens for user sessions and API keys for service-to-service calls.
+
+Load balancing : They just distribute connections without looking at the content.
+
+Geography and latency : A request from New York to London has a minimum latency of around 80ms just from the speed of light through fiber optic cables,
+before you even process anything. If your system needs low latency globally, you'll need regional deployments with data replicated or partitioned by geography.
+This is why CDNs exist - to serve static content from edge servers close to users.
+
+Data Modeling : 
+Denormalization , For read-heavy systems where data rarely changes, this tradeoff is often worth it.
+
+Caching : Use cases
+ Read heavy workloads
+ Expensive queries
+ High database CPU
+ Latency requrements
