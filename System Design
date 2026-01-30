@@ -14,8 +14,16 @@ This is why CDNs exist - to serve static content from edge servers close to user
 Data Modeling : 
 Denormalization , For read-heavy systems where data rarely changes, this tradeoff is often worth it.
 
-Caching : Use cases
+Caching : 
+Store frequently accessed data in fast memory (like Redis) so you can skip the database entirely for most reads. A cache hit on Redis takes around 1ms compared to 20-50ms for a typical database query
+Reduce load on database, letting it handle more write traffic and avoiding the need to scale it prematurely.
+
+CDN caching: It's for static assets like images, videos, and JavaScript files served from edge locations close to users
+
+Use cases
  Read heavy workloads
  Expensive queries
  High database CPU
- Latency requrements
+ Latency requirements
+
+Sharding comes up when you've outgrown a single database and need to split your data across multiple independent servers
