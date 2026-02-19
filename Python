@@ -1,4 +1,10 @@
 Compiled to bytecode , then interpreted      https://docs.python.org/3/tutorial/index.html
+The Execution Workflow
+Source Code (.py): You write human-readable code.
+Compilation: Python checks if a matching .pyc file exists and is up-to-date. If not, it compiles the .py file into bytecode.
+Storage (.pyc): The bytecode is saved in the __pycache__ folder.
+Interpretation: The Python Virtual Machine (PVM) reads the bytecode and executes it. 
+
 Python Interpretor : e.g. Python 3.13.7 . To select click on View => Command Pallet OR Ctrl + Shift + P => Python: Select Interpreter
 DataTypes : Python infers the type int, float . amount = int(10.6) . amount = float(10) . string : name = "my code" . myname = input("whats your name")
 
@@ -10,3 +16,25 @@ import (module name) , e.g. import random
 List : words = ["LOL",'IDK","TBH"]   list = [[1,2,3],[4,5,6]]
 .append .remove 
 Similar to C# List<> :Indexed, mutable, allows duplicates, ordered
+
+Tuples are like ValueTuples , immuttable list. Numerical index only
+namedtuple is a subclass of tuple with named fields .Both numerical index and field name
+defaultdict is a subclass of the built-in dict class that automatically provides a default value for a non-existent key instead of raising a KeyError
+
+match is like switch statement 
+
+json.dumps() 	Python object to JSON
+json.loads() JSON to Python object
+
+import asyncio
+async def get_data():
+    await asyncio.sleep(1)
+    return 5
+asyncio.run(get_data())
+
+A dataclass is a regular Python class that uses the @dataclass decorator to automatically generate "boilerplate" methods—like __init__
+Dataclasses are best for data containers, while regular classes are suited for complex logic or more control
+
+database driver : pip install pyodbc . pip install pymongo
+
+
