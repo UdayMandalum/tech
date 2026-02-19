@@ -37,4 +37,5 @@ Dataclasses are best for data containers, while regular classes are suited for c
 
 database driver : pip install pyodbc . pip install pymongo
 
+Pandas is a powerful, open-source Python library used for data manipulation and analysis
 
