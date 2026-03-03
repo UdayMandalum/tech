@@ -1,0 +1,6 @@
+CI : An automated process of building and testing each change within the software system. 
+CD : Software can be automatically deployed to any environment at any time after the CI step.
+checkin => build => automated tests => automatic deployment
+CI/CD Pipeline options:  GitHub, Az Devops (MS) , Gitlab , Jenkins (Open source)
+
+Github has github actions file (YAML config file) . inside project github\ workflows folder \ .yaml file
